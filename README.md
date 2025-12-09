@@ -117,16 +117,9 @@ This is expected due to:
 
 ## 🖼️ Results Screenshot
 
-Paste your evaluation screenshot here:
-
-```
-
 ---
 
-##<img width="1919" height="764" alt="Screenshot 2025-12-10 002630" src="https://github.com/user-attachments/assets/3af339f6-0aac-47c3-8180-4d43fa5172cc" />
-
-
-````
+<img width="1919" height="764" alt="Screenshot 2025-12-10 002630" src="https://github.com/user-attachments/assets/3af339f6-0aac-47c3-8180-4d43fa5172cc" />
 
 ---
 
