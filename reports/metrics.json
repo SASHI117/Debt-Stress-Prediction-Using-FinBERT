@@ -1,0 +1,159 @@
+{
+  "protocol": {
+    "train_samples": 1447,
+    "test_samples": 653,
+    "train_unique_texts": 271,
+    "held_out_templates_per_class": 3,
+    "base_model": "ProsusAI/finbert",
+    "epochs": 3,
+    "lr": 2e-05,
+    "max_len": 64,
+    "train_minutes_cpu": 5.8,
+    "torch_threads": 10
+  },
+  "finbert": {
+    "held_out_templates": {
+      "accuracy": 0.5406,
+      "macro_f1": 0.552,
+      "confusion": [
+        [
+          145,
+          88,
+          0
+        ],
+        [
+          0,
+          74,
+          133
+        ],
+        [
+          0,
+          79,
+          134
+        ]
+      ]
+    },
+    "challenge": {
+      "accuracy": 0.5417,
+      "macro_f1": 0.5371,
+      "confusion": [
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          3,
+          7
+        ]
+      ]
+    },
+    "challenge_errors": [
+      {
+        "text": "Rs.12,450 credited to a/c XX4471 on 03-Mar. Avl bal Rs.58,210.",
+        "true": "LOW",
+        "pred": "MEDIUM"
+      },
+      {
+        "text": "Your card statement is ready. Total due: Rs.0.",
+        "true": "LOW",
+        "pred": "MEDIUM"
+      },
+      {
+        "text": "No overdue amount on your loan account.",
+        "true": "LOW",
+        "pred": "HIGH"
+      },
+      {
+        "text": "Your insurance premium auto-pay is set for 5th.",
+        "true": "LOW",
+        "pred": "MEDIUM"
+      },
+      {
+        "text": "Minimum due of Rs.2,300 on your card payable by 18th.",
+        "true": "MEDIUM",
+        "pred": "HIGH"
+      },
+      {
+        "text": "Avl bal Rs.340 in a/c XX4471. Maintain MAB to avoid charges.",
+        "true": "MEDIUM",
+        "pred": "HIGH"
+      },
+      {
+        "text": "Your card is nearing its credit limit (92% used).",
+        "true": "MEDIUM",
+        "pred": "HIGH"
+      },
+      {
+        "text": "Your standing instruction could not be verified; please update mandate.",
+        "true": "MEDIUM",
+        "pred": "HIGH"
+      },
+      {
+        "text": "3 EMIs pending. Recovery agent visit scheduled.",
+        "true": "HIGH",
+        "pred": "MEDIUM"
+      },
+      {
+        "text": "Your overdraft limit has been exceeded and interest is accruing daily.",
+        "true": "HIGH",
+        "pred": "MEDIUM"
+      },
+      {
+        "text": "Salary not credited this month; EMI of Rs.18,000 due tomorrow.",
+        "true": "HIGH",
+        "pred": "MEDIUM"
+      }
+    ]
+  },
+  "tfidf_logreg": {
+    "held_out_templates": {
+      "accuracy": 0.4089,
+      "macro_f1": 0.3583,
+      "confusion": [
+        [
+          0,
+          166,
+          67
+        ],
+        [
+          0,
+          133,
+          74
+        ],
+        [
+          79,
+          0,
+          134
+        ]
+      ]
+    },
+    "challenge": {
+      "accuracy": 0.5417,
+      "macro_f1": 0.5101,
+      "confusion": [
+        [
+          2,
+          3,
+          2
+        ],
+        [
+          1,
+          4,
+          2
+        ],
+        [
+          1,
+          2,
+          7
+        ]
+      ]
+    }
+  }
+}

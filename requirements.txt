@@ -1,0 +1,5 @@
+torch>=2.1
+transformers>=4.44,<5
+datasets>=2.20
+accelerate>=0.30
+scikit-learn>=1.3
