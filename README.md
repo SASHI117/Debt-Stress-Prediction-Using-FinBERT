@@ -53,7 +53,7 @@ true HIGH                   0      79   134
   nothing tells it that "due this week" is medium but "overdue" is high.
 - Errors on the challenge set show the gaps. It misses negation ("No overdue
   amount on your loan account" → HIGH), Indian SMS shorthand ("Avl bal",
-  "MAB", "NACH"), and neutral credit messages. "Salary of Rs.45,000
+  "MAB"), and neutral credit messages. "Salary of Rs.45,000
   credited" comes out as MEDIUM at 0.50 confidence.
 - On 24 hand-written messages FinBERT and TF-IDF tie on accuracy. At that
   sample size the difference isn't measurable.
