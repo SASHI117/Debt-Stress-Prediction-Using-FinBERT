@@ -1,10 +1,9 @@
 """Synthetic financial-message dataset with template-aware splitting.
 
 Every sample is one of 30 templates with a random amount or day count
-filled in. Splitting samples at random therefore puts the *same sentence*
-(up to a number) in train and test, and any classifier scores ~100%.
-Splitting by template instead asks the real question: does the model
-recognise financial stress in wording it has never seen?
+filled in. Evaluation splits by template, so the test set contains only
+phrasings the model has never seen: it measures whether the model recognises
+financial stress in new wording.
 """
 import random
 from dataclasses import dataclass
@@ -89,7 +88,7 @@ def split_by_template(samples: list[Sample], test_templates_per_class: int = 3,
 
 def split_random(samples: list[Sample], test_frac: float = 0.2,
                  seed: int = 42) -> tuple[list[Sample], list[Sample]]:
-    """The original (leaky) protocol, kept to show the difference."""
+    """Sample-level random split, kept for comparison with the template split."""
     shuffled = samples[:]
     random.Random(seed).shuffle(shuffled)
     n_test = int(len(shuffled) * test_frac)

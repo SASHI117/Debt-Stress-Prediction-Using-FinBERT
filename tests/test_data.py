@@ -30,8 +30,8 @@ def test_template_split_has_no_template_or_sentence_overlap():
         assert len({s.template_id for s in test if s.label == label}) == 3
 
 
-def test_random_split_leaks_most_test_sentences():
-    """Documents why the original 100% accuracy was not meaningful."""
+def test_random_split_shares_sentences_across_sets():
+    """Why evaluation uses the template split: a sample-level split repeats sentences."""
     train, test = data.split_random(data.generate())
     seen = {s.text for s in train}
     assert sum(s.text in seen for s in test) / len(test) > 0.6
